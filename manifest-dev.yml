@@ -1,0 +1,12 @@
+---
+applications:
+  - name: api-dev
+    memory: 1g
+    instances: 1
+    path: target/edge-0.0.1-SNAPSHOT.jar
+    buildpack: java_buildpack_offline
+    domains:
+      - ik.am
+    env:
+      JAVA_OPTS: -Duser.timezone=Asia/Tokyo -Duser.language=ja -Duser.country=JP
+      management.security.enabled: true
